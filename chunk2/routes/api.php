@@ -18,3 +18,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::post('store', [\App\Http\Controllers\Api\FileController::class,'store']);
+Route::get('get-file/{id}', [\App\Http\Controllers\Api\FileController::class,'getFileById']);
